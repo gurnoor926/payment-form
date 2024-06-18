@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font: 14px Georgia, serif;
+    background: #ccc;
+  }
+  
+  article,
+  aside,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  
+  h2 {
+    font: 24px Georgia;
+    margin: 0 0 10px 0;
+  }
+  h3 {
+    margin: 0 0 8px 0;
+  }
+  p {
+    margin: 1px 2px 20px 3px;
+  }
+  
+  #fluid-wrap {
+    width: 70%;
+    margin: 60px auto;
+    padding: 20px;
+    background: #eee;
+    overflow: hidden;
+  }
+  
+  #sidebar {
+    width: 35%;
+    float: left;
+  }
+  
+  #sidebar ul {
+    list-style: none;
+  }
+  
+  #sidebar ul li a {
+    color: #900;
+    text-decoration: none;
+    padding: 3px 0;
+    display: block;
+  }
+  @media all and (min-width:1001px) {
+    #sidebar ul li a:after{
+        content: "("attr(data-email)")"; 
+        font-size: 11px;
+        font-style: italic;
+        color: gray;
+    }
+  }
+  @media all and (max-width:1000px) and (min-width:700px)
+{
+    #sidebar ul li a:before{
+       content: "email:";
+       font-style: italic;
+       color: gray;
+    }
+}
+@media all and (max-width: 700px) and (min-width:520px) ,(min-width:1151pxS){
+    #sidebar ul li a{
+        padding-left: 21px;
+        background: url(../img/zoro.jpeg) left center no-repeat;
+       
+    }
+}
+  #main-content {
+    width: 75%;
+    float: right;
+    text-align: center;
+    
+  }
